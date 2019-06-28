@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>roborts_slam</name>
+  <version>0.0.0</version>
+  <description>RoboRTS SLAM 2d</description>
+  <author>RoboMaster</author>
+  <maintainer email="robomaster@dji.com">RoboMaster</maintainer>
+  <license>GPL 3.0</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_export_depend>roscpp</build_export_depend>
+
+  <depend>libceres-dev</depend>
+  <depend>sensor_msgs</depend>
+  <depend>message_filters</depend>
+  <depend>nav_msgs</depend>
+  <depend>rosconsole</depend>
+  <depend>geometry_msgs</depend>
+  <depend>tf</depend>
+  <depend>visualization_msgs</depend>
+
+  <exec_depend>roscpp</exec_depend>
+
+  <export>
+  </export>
+
+</package>

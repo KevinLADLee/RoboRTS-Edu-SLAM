@@ -1,0 +1,7 @@
+image: willow-full-0.05.pgm
+resolution: 0.050000
+origin: [-15.025, -28.625, 0.000000]
+negate: 0
+occupied_thresh: 0.5
+free_thresh: 0.5
+

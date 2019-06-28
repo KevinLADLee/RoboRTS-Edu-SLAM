@@ -1,0 +1,9 @@
+<launch>
+  <param name="/use_sim_time" value="false"/>
+  <!-- Load parameters -->
+  <rosparam command="load" file="$(find roborts_slam)/config/real_robot_param.yaml" /> 
+
+  <include file="$(find roborts_slam)/launch/base_laser_link_to_base_link_tf.launch" />
+
+</launch>
+

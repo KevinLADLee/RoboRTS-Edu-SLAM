@@ -1,0 +1,104 @@
+#frame
+global_frame_id      : "map"
+odom_frame_id        : "odom"
+base_frame_id        : "base_link"
+laser_frame_id       : "base_laser_link"
+
+#topic
+laser_topic_name     : "scan"
+map_topic_name       : "map"
+
+#map
+init_map_size          : 3
+map_offset_x           : 0.5
+map_offset_y           : 0.5
+map_extend_factor      : 0.2
+gaussian_blur_offset   : 0.88
+
+map_resolution         : 0.05
+map_update_free_factor : 0.0
+map_update_occu_factor : 0.0
+map_occu_threshold     : 0.2
+map_min_passthrough    : 4
+
+coarse_map_resolution : 0.08
+coarse_map_deviation  : 0.24
+coarse_map_use_blur   : true
+
+fine_map_resolution   : 0.01
+fine_map_deviation    : 0.03
+fine_map_use_blur     : true
+
+
+#sensor
+use_odom_correct        : true
+odom_interpolation_time : 0.005
+range_threshold_scale   : 0.95
+
+
+#optimize
+use_optimize_scan_match : false
+
+iterate_times           : 10
+cost_decrease_threshold : 0.1
+cost_min_threshold      : 0.5
+max_update_distance     : 0.5
+max_update_angle        : 0.5
+optimize_failed_cost    : 2.0
+
+
+#correlattion
+coarse_search_space_size       : 0.6
+coarse_search_space_resolution : 0.05
+coarse_search_angle_offset     : 0.523
+coarse_search_angle_resolution : 0.0349
+coarse_response_threshold      : 0.6
+coarse_use_point_size          : 100
+
+fine_search_space_size        : 0.2
+fine_search_space_resolution  : 0.02
+fine_search_angle_offset      : 0.175
+fine_search_angle_resolution  : 0.0349
+fine_response_threshold       : 0.6
+fine_use_point_size           : 100
+
+super_fine_search_space_size        : 0.02
+super_fine_search_space_resolution  : 0.01 
+super_fine_search_angle_offset      : 0.0349
+super_fine_search_angle_resolution  : 0.00349
+super_fine_response_threshold       : 0.6
+super_fine_use_point_size           : 100
+
+
+#slam
+use_odometry               : true
+
+use_map_check_feedback     : true
+map_check_point_num        : 100
+map_check_bound_tolerance  : 2.5
+map_check_penalty_gain     : 0.015
+
+map_update_score_threshold     : 0.52
+use_map_update_move_check      : false
+map_update_distance_threshold  : 0.1
+map_update_angle_threshold     : 0.174
+
+use_move_check           : true
+move_distance_threshold  : 0.2
+move_angle_threshold     : 0.174
+move_time_threshold      : 3.6
+
+#move_max_linear_vel      : 3.0
+#move_max_angular_vel     : 3.0
+
+#running_range_size          : 70
+#running_range_max_distance  : 5.0
+
+
+#close loop
+loop_match_min_chain_size : 8
+link_match_min_response : 0.68
+link_scan_max_distance : 3
+loop_match_min_response_coarse : 0.7
+loop_match_max_variance_coarse : 0.4
+loop_match_min_response_fine : 0.7
