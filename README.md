@@ -1,4 +1,4 @@
-# RoboRTS-Edu
+# RoboRTS-Edu-SLAM
 This project is an education version of RoboRTS-SLAM (2d-version).
 
 ## Feature
