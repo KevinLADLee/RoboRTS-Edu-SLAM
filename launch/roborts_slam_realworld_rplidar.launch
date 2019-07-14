@@ -4,17 +4,8 @@
   <!-- Load parameters -->
   <rosparam command="load" file="$(find roborts_slam)/config/real_robot_param.yaml" /> 
 
-  <!-- Rplidar Driver -->
-  <node name="rplidar_node" pkg="rplidar_ros" type="rplidarNode" output="screen">
-    <param name="serial_port" type="string" value="/dev/rplidar"/>
-    <param name="serial_baudrate" type="int" value="115200"/>
-    <param name="frame_id" type="string" value="base_laser_link"/>
-    <param name="inverted" type="bool" value="false"/>
-    <param name="angle_compensate" type="bool" value="true"/>
-  </node>
-
   <!-- Static Transform -->
-  <include file="$(find roborts_slam)/launch/base_laser_link_to_base_link_tf.launch" />
+  <!-- include file="$(find roborts_slam)/launch/base_laser_link_to_base_link_tf.launch" / -->
 
   <!-- RoboRTS SLAM Node -->
   <node pkg="roborts_slam" type="roborts_slam_node" name="roborts_slam_node" output="screen" >
