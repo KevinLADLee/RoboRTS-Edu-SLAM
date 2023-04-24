@@ -3,13 +3,13 @@
     <rosparam  command="load" file="$(find roborts_slam)/config/simulatin_param.yaml" />
 
     <node name="roborts_slam_node" pkg="roborts_slam"  type="roborts_slam_node" output="screen" >
-        <remap from="scan" to="scan" />
+        <remap from="scan" to="/vrep/scan" />
     </node>
 
-    <node pkg="stage_ros" type="stageros" name="stageros" args="$(find roborts_slam)/worlds/rm.world" respawn="false" >
+    <!-- <node pkg="stage_ros" type="stageros" name="stageros" args="$(find roborts_slam)/worlds/rm.world" respawn="false" >
         <remap from="base_scan" to="scan"/>
         <param name="base_watchdog_timeout" value="0.5" />
-    </node>
+    </node> -->
 
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find roborts_slam)/rviz/rviz.rviz" />
 

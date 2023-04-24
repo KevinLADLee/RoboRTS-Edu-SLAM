@@ -71,7 +71,7 @@ super_fine_use_point_size           : 100
 
 
 #slam
-use_odometry               : true
+use_odometry               : false
 
 use_map_check_feedback     : true
 map_check_point_num        : 100
